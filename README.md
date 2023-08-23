@@ -7,3 +7,7 @@ The goal of this project was to create a ToDo List web application using Node.js
 1. Node.js & Express.js: The application is a web server built using Node.js and Express.js. Express.js handles routing and middleware.
 
 2. EJS: EJS is used as the templating engine to generate dynamic HTML based on the application's state.
+
+
+![image](https://github.com/jhargett1/Capstone-Project---TodoList-Application/assets/119984652/840ace5a-5138-4ec0-921b-a146ed438a16)
+
