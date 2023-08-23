@@ -1,0 +1,33 @@
+<%- include("partials/header") -%>
+<div class="container diffStyle">
+        <div class="card" style="width: 18rem;">
+            <img src= <%=listImage %> class="card-img-top" alt="today">
+            <div class="card-body">
+              <h3 class="card-title"><%= listTitle %></h3>
+            </div>
+          </div>
+    </div>
+    <div class="container">
+      <form action="/" method="POST" class="inputGroup">
+        <input type="text" id="myInput" placeholder="Title..." name="newItem" autocomplete="off">
+        <input type="submit" value= <%=listTitle %> class="addBtn" name="list"/>
+      </form>
+    </div>
+    <div class="container">
+      <% newListItems.forEach(function(newListItem, index) { %>
+        <ul class="list-group" id="myUL">
+          <% if (newListItem) { %>
+            <li class="itemList <%= newListItem.checked ? 'checked' : '' %>"
+                <% if (listTitle === "Work") { %>
+                  onclick="location.href='/work/toggle/<%= index %>'"
+                <% } else { %>
+                  onclick="location.href='/toggle/<%= index %>'"
+                <% } %>
+            >
+              <%= newListItem.text %>
+            </li>
+          <% } %>
+      <% }); %>
+        </ul>
+    </div>
+<%- include("partials/footer") -%>
